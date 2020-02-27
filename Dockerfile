@@ -1,5 +1,5 @@
-FROM python:3
-ADD phonebook.py /
-ADD phonebook.db /
+FROM python:3.7
+WORKDIR .
+COPY . .
 RUN pip install pystrich
-CMD [ "python", "./phonebook.py" ]
+CMD [ "python", "phonebook.py" ]
