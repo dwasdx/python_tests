@@ -1,5 +1,4 @@
 FROM python:3.7
 WORKDIR phonebook
-COPY *.py *.txt /phonebook/
-RUN pip install -r requirements.txt
+COPY *.py /phonebook/
 CMD [ "python", "phonebook.py" ]
