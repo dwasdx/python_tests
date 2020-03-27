@@ -15,6 +15,16 @@ cd <dir_with_files>
 python3 phonebook.py
 ```
 If everything is done correctly, you should be able to see the menu
+## How to run this thing in Docker container
+First of all, move into directory with sources you've just downloaded, then enter this command in order to build it
+```
+docker build -t <image_name> .
+```
+Once the building is done, run this app in Docker container:
+```
+docker run -it -v <your path to phonebook.db>:/phonebook/phonebook.db <image_name>
+```
+You will get the same functional and also changes in ``phonebook.db`` executed in container will also be saved on your local machine
 ## How to work with this ~~shit~~
 After completion of every command you will see menu with list of available commands:
 ```
