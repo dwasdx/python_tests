@@ -129,6 +129,9 @@ def __delete_person__(name = '', surname = '', phone = '', date = ''):
     if not records:
         print(mess1)
         return
+    elif len(records) == 1:
+        sql_op = '''DELETE FROM phonebook WHERE name = "{}" AND surname = "{}"'''.format(name, surname)
+        cursor.execute(sql_op)
     elif len(records) > 1:
         print(mess2)
         print('=====================')
@@ -197,6 +200,7 @@ def chane_field(name = '', surname = ''):
     print('Enter new value for this field')
     val = input().strip()
     __change_field__(field, val, name, surname)
+    print("Changing complete")
 
 
 def __age_output__(name, surname):
