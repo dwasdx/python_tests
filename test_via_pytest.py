@@ -29,4 +29,4 @@ class TestClass:
         assert __phone_check__('89503451234') == '89503451234'
 
     def test_for_new_commit(self):
-        assert 1 is 1
+        assert 1 == 1
