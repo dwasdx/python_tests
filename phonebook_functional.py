@@ -258,10 +258,3 @@ conn = sql.connect('phonebook.db')
 cursor = conn.cursor()
 cursor.execute('''CREATE TABLE IF NOT EXISTS phonebook
                                 (name text, surname text, phone text, date text)''')
-
-# __add_person__('Dmitriy', 'Medvedev', '89340007579', '')
-# __change_field__('name', 'Anatoliy', 'Dmitriy', 'Medvedev')
-# fetched_name = cursor.execute('''SELECT name FROM phonebook WHERE name = "Anatoliy" and surname = "Medvedev"''').fetchall()
-# print(fetched_name)
-# __delete_person__('Anatoliy', 'Medvedev')
-# # print_book()
